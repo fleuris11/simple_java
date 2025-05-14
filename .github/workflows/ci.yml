@@ -23,10 +23,10 @@ jobs:
         distribution: 'temurin'
 
     - name: Compile Java files
-      run: javac -cp "lib/junit-4.13.2.jar" -d bin src/Calculator.java tests/CalculatorTest.java
+      run: javac -cp "lib/junit-4.13.2.jar:lib/hamcrest-all-1.3.jar" -d bin src/Calculator.java tests/CalculatorTest.java
 
     - name: Run JUnit tests
-      run: java -cp "lib/junit-4.13.2.jar:bin" org.junit.runner.JUnitCore CalculatorTest
+      run: java -cp "lib/junit-4.13.2.jar:lib/hamcrest-all-1.3.jar:bin" org.junit.runner.JUnitCore CalculatorTest
 
     - name: Create JAR
       run: jar cfm calculator.jar MANIFEST.MF bin/Calculator.class
