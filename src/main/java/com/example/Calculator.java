@@ -11,7 +11,7 @@ public class Calculator {
 
     public static void main(String[] args) {
         Calculator calc = new Calculator();
-        System.out.println("2 + 2 = " + calc.add(2, 2));
+        System.out.println("2 + 2 = " + calc.add(4, 8));
         System.out.println("2 - 2 = " + calc.subtract(2, 2));
     }
 }
